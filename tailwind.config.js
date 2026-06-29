@@ -1,0 +1,70 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          50:  '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          700: '#15803d',
+          800: '#166534',
+          900: '#14532d',
+          950: '#052e16',
+        },
+        surface: {
+          50:  '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+          950: '#020617',
+        },
+        income:  '#22c55e',
+        expense: '#f43f5e',
+        warning: '#f59e0b',
+      },
+      fontFamily: {
+        sans: ['Inter var', 'Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+        display: ['Cal Sans', 'Inter var', 'Inter', 'sans-serif'],
+      },
+      borderRadius: {
+        '2xl': '1rem',
+        '3xl': '1.5rem',
+      },
+      boxShadow: {
+        'glass': '0 4px 24px -4px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.08)',
+        'glass-lg': '0 8px 40px -8px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.06)',
+        'glow-green': '0 0 24px rgba(34,197,94,0.25)',
+        'glow-red': '0 0 24px rgba(244,63,94,0.25)',
+      },
+      animation: {
+        'slide-up':   'slideUp 0.3s cubic-bezier(0.16,1,0.3,1)',
+        'slide-down': 'slideDown 0.3s cubic-bezier(0.16,1,0.3,1)',
+        'fade-in':    'fadeIn 0.2s ease-out',
+        'scale-in':   'scaleIn 0.2s cubic-bezier(0.16,1,0.3,1)',
+        'shimmer':    'shimmer 1.5s infinite',
+      },
+      keyframes: {
+        slideUp:   { from: { transform: 'translateY(8px)', opacity: 0 }, to: { transform: 'translateY(0)', opacity: 1 } },
+        slideDown: { from: { transform: 'translateY(-8px)', opacity: 0 }, to: { transform: 'translateY(0)', opacity: 1 } },
+        fadeIn:    { from: { opacity: 0 }, to: { opacity: 1 } },
+        scaleIn:   { from: { transform: 'scale(0.95)', opacity: 0 }, to: { transform: 'scale(1)', opacity: 1 } },
+        shimmer:   { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+      },
+    },
+  },
+  plugins: [],
+}
